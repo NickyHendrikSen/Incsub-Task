@@ -1,0 +1,107 @@
+$lightblue: #004fec;
+$inactive-bullet:#aaaaaa;
+$active-bullet: #333333;
+
+$mediumSize: 800px;
+$smallSize: 500px;
+
+.Register{
+    width: 100%;
+    height: 100vh;
+    .RegisterWrapper{
+        display: flex;
+        height: 100%;
+        .RegisterContent{
+            width: calc(65% - 60px);
+            padding: 30px;
+            position: relative;
+            @media only screen and(max-width: $mediumSize){
+                width: 100%;
+                width: calc(100% - 60px);
+            }
+            .RegisterStep{
+                text-align: right;
+                .RegisterStepInner{
+                    color: black;
+                    font-size: 14px;
+                    font-weight: bold;
+                    .RegisterStepBullet{
+                        margin: 0px 4px;
+                        display: inline-block;
+                        *{
+                            margin: 0px 4px;
+                        }
+                        .inactive-bullet{
+                            color: $inactive-bullet;
+                        }
+                        .active-bullet{
+                            color: $active-bullet;
+                        }
+                    }
+                }
+            }
+            .RegisterStepContent{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                .ActiveComponent{
+                    display: block;
+                }
+                .InActiceComponent{
+                    display: none;
+                }
+            }
+        }
+        .RegisterHeader{
+            width: 35%;
+            background-color: $lightblue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            .RegisterHeaderWrapper{
+                width: 55%;
+                a{
+                    color: white;
+                    font-size: 30px;
+                    font-weight: 700;
+                    text-align: center;
+                    text-decoration: none;
+                    display: block;
+                }
+                div{
+                    margin-top: 80px;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+            @media only screen and(max-width: $mediumSize){
+                display: none;
+            }
+        }
+    }
+}
+
+// .page-transition-enter {
+//     transform: translateX(100%);
+//     position: absolute;
+//     top: 0;
+// }
+// .page-transition-enter-active{
+//     transform: translateX(0);
+//     transition-duration: 1000ms;
+//     position: absolute;
+//     top: 0;
+// }
+// .page-transition-exit{
+//     transform: translateX(0);
+//     position: absolute;
+//     top: 0;
+// }
+// .page-transition-exit-active{
+//     transform: translateX(-100%);
+//     transition-duration: 1000ms;
+//     position: absolute;
+//     top: 0;
+// }
