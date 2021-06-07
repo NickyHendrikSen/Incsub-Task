@@ -14,10 +14,6 @@ const InputLabel = lazy(() => import('@material-ui/core/InputLabel'))
 const FormHelperText = lazy(() => import('@material-ui/core/FormHelperText'))
 const validator = lazy(() => import('validator'))
 
-const Title = () => {
-  return(<div className="Title">Let's set up your account</div>)
-}
-
 class StepOne extends React.PureComponent{
   constructor(props){
     super(props)
@@ -140,7 +136,7 @@ class StepOne extends React.PureComponent{
     return (
       <div className="StepOne" ref={this.wrapper}>
         <div className="StepOneWrapper">
-          {/* {Title()} */}
+          <div className="Title">Let's set up your account</div>
           <div className="SignInTitle">Already have an account?
             &nbsp;
             <Link to = "/signIn">Sign in</Link>
